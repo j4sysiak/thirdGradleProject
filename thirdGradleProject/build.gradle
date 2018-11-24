@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+	compile 'commons-codec:commons-codec:1.6'
+}
+
+
+task caesar(type: JavaExec){
+	main = 'org.gradle.poetry.Poetry'
+	classpath = sourceSets.main.runtimeClasspath
+}
